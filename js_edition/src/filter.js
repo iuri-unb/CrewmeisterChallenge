@@ -15,11 +15,11 @@ export async function FilterAllAbsences ()
             if(member.userId == element.userId)
             {
                 // add name and type
-                peoples.push({name : member.name , type: element.type}) 
+                peoples.push({name : member.name , type: element.type, startDate: element.startDate, endDate: element.endDate}) 
                 return peoples;          
             }
         });        
-    });
+    });  
     
     // console.log(peoples)
 }
@@ -35,22 +35,20 @@ export async function FilterAbsencesByType()
      
     let list_sick_filtered = [];
 
-    list_absences.forEach(element => {
-         list_members.forEach(member => {
+        list_absences.forEach(element => {
+            list_members.forEach(member => {
             // Compare id of the users
-            if(element.type == "vacation")
+            if(element.type == "vacation" && member.userId == element.userId)
             {
                 // add name and type
-                list_absences_filtered.push({name : member.name , type: element.type})  
-                return list_absences_filtered;         
+                list_absences_filtered.push({ID : element.id ,name : member.name , type: element.type})           
             }
-            else
+            else if(element.type == "sickness" && member.userId == element.userId)
             {
-                list_sick_filtered.push({name : member.name , type: element.type}); 
-                return list_sick_filtered;       
+                list_sick_filtered.push({ID : element.id,name : member.name , type: element.type});        
             }
         });        
-    });
+    });        
     //console.log(list_absences_filtered);
     //console.log(list_sick_filtered);
 }

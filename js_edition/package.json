@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "type": "module",
-  "start": "node --experimental-modules index.js",
   "scripts": {
+    "start": "node --experimental-modules ./src/filter.js ./src/show.js index.js",
     "test": "mocha --compilers js:babel-register ./src/{*,**/*,**/**/*,**/**/**/*,**/**/**/**/*}.spec.js"
   },
   "author": "",

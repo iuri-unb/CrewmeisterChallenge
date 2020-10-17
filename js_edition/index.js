@@ -1,5 +1,6 @@
-import {FilterAbsencesByType, FilterAllAbsences} from "./src/filter.js";
+import { members, absences } from './src/api.js';
+import {RowGenerator, ShowAllAbsences, TableGenerator} from "./src/show";
+import {FilterAbsencesByType, FilterAllAbsences} from "./src/filter";
 
-FilterAbsencesByType();
-
-FilterAllAbsences();
+const teste = TableGenerator();
+console.log(teste);
