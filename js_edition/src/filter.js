@@ -51,7 +51,6 @@ export async function FilterAbsencesByType()
             }
         });        
     });
-
     //console.log(list_absences_filtered);
     //console.log(list_sick_filtered);
 }

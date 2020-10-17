@@ -1,5 +1,5 @@
 import {FilterAbsencesByType, FilterAllAbsences} from "./src/filter.js";
 
-const teste = FilterAbsencesByType();
-console.log(teste);
+FilterAbsencesByType();
+
 FilterAllAbsences();
