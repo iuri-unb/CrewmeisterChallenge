@@ -1,14 +1,16 @@
 // Update with your config settings.
+import path from 'path';
 
 module.exports = {
-
-  development: {
-    client: 'pg',
+    client: 'sqlite3',
     connection: {
-      database: "",
-      user: "postgres",
-      password: "0000"
-    }
-  },
-
+        filename: path.resolve(__dirname, 'src', 'database', 'database.sqlite'),
+    },
+    migrations: {
+        directory: path.resolve(__dirname, 'src', 'database', 'migrations'),
+    },
+    //seeds: {
+    //    directory: path.resolve(__dirname, 'src', 'database', 'seeds'),
+    //},
+    useNullAsDefault: true,
 };

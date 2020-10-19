@@ -15,7 +15,7 @@ export async function FilterAllAbsences ()
             if(member.userId == element.userId)
             {
                 // add name and type
-                peoples.push({name : member.name , type: element.type, startDate: element.startDate, endDate: element.endDate}) 
+                peoples.push({userId: member.userId, name : member.name , type: element.type, startDate: element.startDate, endDate: element.endDate}) 
                 return peoples;          
             }
         });        
@@ -24,7 +24,7 @@ export async function FilterAllAbsences ()
     console.log(peoples)
 }
 
-FilterAllAbsences (); 
+//FilterAllAbsences (); 
 
 export async function FilterAbsencesByType()
 {
