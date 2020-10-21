@@ -1,4 +1,5 @@
 import { members, absences } from './api.js';
+import responseFile from './export_file.js';
 import ics from 'ics';
 import path from 'path';
 import fs from 'fs';
@@ -8,8 +9,6 @@ export async function icalEvents() {
     let list_members = [];
     list_absences = await absences(); 
     list_members = await members();
-
-    let event = [];
     
     list_absences.forEach(element => {
         list_members.forEach(member => {
@@ -39,21 +38,20 @@ export async function icalEvents() {
 
                 if (error) {
                     console.log(error)
-                    return
+                    return ("Problema ao gerar o Arquivo");
                 }
                 //console.log(value);
                 fs.writeFile(path.resolve('download', 'calendar.ics'), value, {enconding:'utf-8',flag: 'a'}, function (err) {
                     if (err) throw err;
-                    console.log('Arquivo salvo!');
+                    //console.log('Arquivo salvo!');
                 });
                                 
             }
             
         });
     });
-
-    return "calendar.ics";
-       
-    
+    const verifyFile = responseFile("calendar.icms");
+    return verifyFile;
+        
 }
-icalEvents();
+

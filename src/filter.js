@@ -46,7 +46,7 @@ export async function FilterAbsencesById(Id)
     
     let verify = list_absences_filtered_id[0];
     if( verify.userId != Id ){
-        console.log("Invalid userId");
+        return 1;
 
     }else{        
         return list_absences_filtered_id;

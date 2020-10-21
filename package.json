@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "mocha --compilers js:babel-register ./src/{*,**/*,**/**/*,**/**/**/*,**/**/**/**/*}.spec.js"
+    "test": "mocha ./src/api.spec.js"
   },
   "author": "",
   "license": "ISC",
