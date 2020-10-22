@@ -23,5 +23,13 @@ routes.get('/member', async (request, response) => {
     return response.json(filterUser);
 });
 
+routes.get('/rangeDate', async (request, response) => {
+    const startDate = request.query.startDate;
+    const endDate = request.query.endDate;
+
+    const filterDate = await FilterAbsencesByDate(startDate, endDate);
+
+    return response.json(filterDate);
+});
 
 export default routes;

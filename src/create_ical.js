@@ -9,6 +9,7 @@ export async function icalEvents() {
     let list_members = [];
     list_absences = await absences(); 
     list_members = await members();
+    const fileName = "calendar.ics";
     
     list_absences.forEach(element => {
         list_members.forEach(member => {
@@ -50,8 +51,10 @@ export async function icalEvents() {
             
         });
     });
-    const verifyFile = responseFile("calendar.icms");
-    return verifyFile;
-        
-}
 
+    responseFile(fileName);
+    /*
+    console.log(verifyFile);
+    return verifyFile;
+    */    
+}

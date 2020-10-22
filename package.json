@@ -2,10 +2,10 @@
   "name": "developer-challenge",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
-    "test": "mocha ./src/api.spec.js"
+    "test": "mocha"
   },
   "author": "",
   "license": "ISC",
