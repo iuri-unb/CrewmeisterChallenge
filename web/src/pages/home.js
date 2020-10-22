@@ -22,18 +22,18 @@ const Home = () => {
                             </Link>
                         </button>
                         <button type="button" id="home">
-                            <Link to="/">
+                            <Link to="/download">
                                 <strong>Export iCal File</strong>
                             </Link>
-                        </button><br/><br/><br/><br/>                        
+                        </button><br/><br/>                      
                         <input type="text" onChange={(e)=> setId(e.target.value)} placeholder="Write an ID"></input>
                         <button type="submit" id="home">
                             <a href= {`/member?userId=${inputId}`} >
                                 <strong>Search Member</strong>
                             </a>
                         </button><br /><br />
-                        <input type="text" onChange={(sd)=> setStart(sd.target.value)} placeholder="Write the start date"></input>
-                        <input type="text" onChange={(ed)=> setEnd(ed.target.value)} placeholder="Write the end date"></input>
+                        <input type="text" onChange={(sd)=> setStart(sd.target.value)} placeholder="Write the start date(ex: 2000-01-10)"></input>
+                        <input type="text" onChange={(ed)=> setEnd(ed.target.value)} placeholder="Write the end date(ex: 2000-01-10)"></input>
                         <button type="submit" id="home">
                             <a href= {`/rangeDate?startDate=${inputStartDate}&endDate=${inputEndDate}`} >
                                 <strong>Search</strong>

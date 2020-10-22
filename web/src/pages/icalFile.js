@@ -5,16 +5,17 @@ import { Link } from 'react-router-dom';
 const iCal = () => {
 
     async function iCalRoute() {
-        const response = await api.get('/');
-        
+        const response = await api.get('/download');
+        console.log(response);
         return response;
     }
-    
+    let flag;
+    flag = iCalRoute();
     /*
     function verifyFlag(flagFile){
         if(flagFile == 0){
             return ("File Saved on ./download");
-        }else{
+        }else if(flagFile == 1){
             return ("Fail on export the .ics file");
         }
     }
@@ -26,7 +27,7 @@ const iCal = () => {
                 <header>
                     <h1>File Saved on ./download</h1>
                     <button type="button" id="home">
-                        <Link to="/home">
+                        <Link to="/">
                             <strong>Back to Home</strong>
                         </Link>
                     </button>

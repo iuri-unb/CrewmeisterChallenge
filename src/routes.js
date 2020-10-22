@@ -4,7 +4,7 @@ import {icalEvents} from './create_ical.js';
 
 const routes = express.Router();
 
-routes.get('/', async (request, response) => {
+routes.get('/download', async (request, response) => {
     const calendar = await icalEvents();    
 
     return calendar;

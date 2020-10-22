@@ -5,21 +5,31 @@ import { Link } from 'react-router-dom';
 
 const AbsencesById = () => {
     const [DataId , setDataId ] = useState([]);
+    const [lixo,id] = window.location.search.split('=');
 
-    async function AbsenceUserId(Id) {
-        const response = await api.get(`/member?userId=${Id}`);
     
+    async function AbsenceUserId(id) {
+        const response = await api.get(`/member?userId=${id}`);
+            
         setDataId(response.data);
     }
-    AbsenceUserId();
+    AbsenceUserId(id);    
+    
+    function verifyId(id){
+        if(id == ""){
+            return "Invalid Id!";
+        }else{
+            return "Absence by Id";
+        }
+    }
 
     return (
-        <div id="page-all-absences">
-            <div className="content">
+        
+            <div >
                 <header>
-                    <h1>Absence for Id: {DataId.userId}</h1>
+                <h1>{verifyId(DataId)}</h1>
                     <button type="button" id="home">
-                        <Link to="/home">
+                        <Link to="/">
                             <strong>Back to Home</strong>
                         </Link>
                     </button>
@@ -30,7 +40,7 @@ const AbsencesById = () => {
                 </main>
                 
             </div>
-        </div>
+        
     );
 }
 

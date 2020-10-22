@@ -9,15 +9,14 @@ import iCal from './pages/icalFile.js';
 
 
 const Routes = () => {
-    //const query = new URLSearchParams(this.props.location.search);
-    //const Id = query.get('userId');
+
     return (
         <BrowserRouter>
-            <Route component={Home} path="/home" exact />
+            <Route component={Home} path="/" exact />
             <Route component={AllAbsences} path="/allAbsences" exact />
-            <Route component={AbsencesById} path="/members" exact/>
+            <Route component={AbsencesById} path="/member" exact/>
             <Route component={AbsencesByDate} path="/rangeDate" exact/>
-            <Route component={iCal} path="/" exact />
+            <Route component={iCal} path="/download" exact />
         </BrowserRouter>
     )
 }

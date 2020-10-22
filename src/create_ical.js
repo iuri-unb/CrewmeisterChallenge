@@ -38,13 +38,12 @@ export async function icalEvents() {
                 ]);
 
                 if (error) {
-                    console.log(error)
-                    return ("Problema ao gerar o Arquivo");
+                    return error;
                 }
-                //console.log(value);
+                
                 fs.writeFile(path.resolve('download', 'calendar.ics'), value, {enconding:'utf-8',flag: 'a'}, function (err) {
                     if (err) throw err;
-                    //console.log('Arquivo salvo!');
+                    
                 });
                                 
             }
@@ -52,9 +51,5 @@ export async function icalEvents() {
         });
     });
 
-    responseFile(fileName);
-    /*
-    console.log(verifyFile);
-    return verifyFile;
-    */    
+    responseFile(fileName);  
 }

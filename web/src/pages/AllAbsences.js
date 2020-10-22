@@ -14,12 +14,12 @@ const AllAbsences = () => {
     Absences();
 
     return (
-        <div id="page-all-absences">
-            <div className="content">
+        
+            <div >
                 <header>
                     <h1>All Absences</h1>
                     <button type="button" id="home">
-                        <Link to="/home">
+                        <Link to="/">
                             <strong>Back to Home</strong>
                         </Link>
                     </button>
@@ -30,7 +30,7 @@ const AllAbsences = () => {
                 </main>
                 
             </div>
-        </div>
+        
     );
 }
 

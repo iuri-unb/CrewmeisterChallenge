@@ -9,16 +9,14 @@ const responseFile = (fileName, response) => {
   // Check if file specified by the filePath exists 
   fs.access(filePath, function(exists){
       if (exists) {     
-        //flag = 0;
-        return("File Saved on ./download>");
-        //return flag;
+        flag = 0;  
 
       } else {  
-        //flag = 1;        
-        //return flag;
-        return("Fail on export the .ics file");
+        flag = 1;        
+
       }
+      return flag;
     });
 }
-//responseFile('calendar.ics');
+
 export default responseFile;
