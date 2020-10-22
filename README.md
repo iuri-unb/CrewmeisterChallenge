@@ -1,8 +1,13 @@
 # Prerequisites
 
 1. Install node (v6.5.0 or higher)
-2. `npm i`
+2. `npm install` on the root
+3. `npm install` on the /web folder
 
-## Running Specs
+## Running
 
-`npm run test` or `npm run test -- --watch`
+1. `npm server` on the root to start the server
+2. `npm server` on the /web folder to start react
+
+## Specs
+The specs doesn't work
