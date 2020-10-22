@@ -1,0 +1,38 @@
+header {
+    text-align: center;
+    margin: 5%;
+}
+
+#home {
+    background-color:  #e6e6e6;
+    border: none;
+    color:black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 1%;
+    transition-duration: 0.4s;
+    text-decoration:none;
+}
+
+#home strong {
+    text-decoration:none;
+}
+  
+#home:hover {
+    background-color: #acacac; /* Green */
+    color: rgb(0, 0, 0);
+}
+
+input[type=text] {
+    background-color: white;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding-left: 10px;
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
+    margin-left: 1%;
+}
