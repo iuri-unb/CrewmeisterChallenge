@@ -8,6 +8,3 @@
 
 1. `npm server` on the root to start the server
 2. `npm server` on the /web folder to start react
-
-## Specs
-The specs doesn't work
